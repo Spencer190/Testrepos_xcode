@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		84893A5B1FA66CE300ECE85F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84893A5A1FA66CE300ECE85F /* main.cpp */; };
+		84893A6A1FA670A700ECE85F /* FileViewer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84893A621FA670A500ECE85F /* FileViewer.cpp */; };
+		84893A6B1FA670A700ECE85F /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84893A651FA670A600ECE85F /* test.cpp */; };
+		84893A6C1FA670A700ECE85F /* Buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84893A691FA670A600ECE85F /* Buffer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +26,15 @@
 
 /* Begin PBXFileReference section */
 		84893A571FA66CE300ECE85F /* Testrepos_xcode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Testrepos_xcode; sourceTree = BUILT_PRODUCTS_DIR; };
-		84893A5A1FA66CE300ECE85F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		84893A611FA670A500ECE85F /* Buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Buffer.h; sourceTree = "<group>"; };
+		84893A621FA670A500ECE85F /* FileViewer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileViewer.cpp; sourceTree = "<group>"; };
+		84893A631FA670A500ECE85F /* sample_interface.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sample_interface.txt; sourceTree = "<group>"; };
+		84893A641FA670A600ECE85F /* specification.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = specification.txt; sourceTree = "<group>"; };
+		84893A651FA670A600ECE85F /* test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
+		84893A661FA670A600ECE85F /* FileViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileViewer.h; sourceTree = "<group>"; };
+		84893A671FA670A600ECE85F /* design.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = design.txt; sourceTree = "<group>"; };
+		84893A681FA670A600ECE85F /* preface.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = preface.txt; sourceTree = "<group>"; };
+		84893A691FA670A600ECE85F /* Buffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Buffer.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +67,15 @@
 		84893A591FA66CE300ECE85F /* Testrepos_xcode */ = {
 			isa = PBXGroup;
 			children = (
-				84893A5A1FA66CE300ECE85F /* main.cpp */,
+				84893A691FA670A600ECE85F /* Buffer.cpp */,
+				84893A611FA670A500ECE85F /* Buffer.h */,
+				84893A671FA670A600ECE85F /* design.txt */,
+				84893A621FA670A500ECE85F /* FileViewer.cpp */,
+				84893A661FA670A600ECE85F /* FileViewer.h */,
+				84893A681FA670A600ECE85F /* preface.txt */,
+				84893A631FA670A500ECE85F /* sample_interface.txt */,
+				84893A641FA670A600ECE85F /* specification.txt */,
+				84893A651FA670A600ECE85F /* test.cpp */,
 			);
 			path = Testrepos_xcode;
 			sourceTree = "<group>";
@@ -119,7 +137,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84893A5B1FA66CE300ECE85F /* main.cpp in Sources */,
+				84893A6C1FA670A700ECE85F /* Buffer.cpp in Sources */,
+				84893A6A1FA670A700ECE85F /* FileViewer.cpp in Sources */,
+				84893A6B1FA670A700ECE85F /* test.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
