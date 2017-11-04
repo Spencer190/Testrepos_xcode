@@ -7,7 +7,7 @@
 #include <string>
 
 //lksjdf;lasdjfal;sd
-
+//different
 class Buffer
 {
 public:
