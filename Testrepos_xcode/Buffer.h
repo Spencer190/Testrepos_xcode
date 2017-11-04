@@ -1,5 +1,5 @@
 // Buffer.h
-// one min
+
 #include <vector>
 #include <string>
 
