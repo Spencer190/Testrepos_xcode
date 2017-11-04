@@ -1,5 +1,5 @@
 // Buffer.h
-
+//This is a fantastic comment
 #include <vector>
 #include <string>
 
