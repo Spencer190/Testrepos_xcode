@@ -26,7 +26,7 @@ public:
     string previous_file ();
     string linked_files(const int & anchor_num);
     
-private:
+private:;
     vector<string> v_lines_;
     vector<string> formatted_lines_;
     vector<string> browser_files_;

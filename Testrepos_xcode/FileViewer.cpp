@@ -1,6 +1,7 @@
 // FileViewer.cpp
 
 #include "FileViewer.h"
+#include "Buffer.h"
 
 #include <iostream>
 using std::cin;
@@ -19,7 +20,7 @@ void FileViewer::display()
         error_message_.clear();
     }
 
-    string file_name = buffer_.file_name_();
+    string file_name = buffer_.get_file_name();
     if (file_name.empty())
         cout << "<no file opened>\n";
     else
@@ -31,58 +32,6 @@ void FileViewer::display()
     cout << "  next  previous  open  quit\n";
     cout << short_separator << endl;
 }
-
-//void FileViewer::execute_command(char command, bool & done)
-//{
-//    switch (command) {
-//        case 'n': {
-//            buffer_.move_to_next_page();
-//            break;
-//        }
-//
-//        case 'o': {
-//            cout << "file name: ";
-//            string file_name;
-//            getline(cin, file_name);
-//            if (!buffer_.open(file_name))
-//                error_message_ = "Could not open " + file_name;
-//            break;
-//        }
-//
-//        case 'p': {
-//            buffer_.move_to_previous_page();
-//            break;
-//        }
-//
-//        case 'q': {
-//            done = true;
-//            break;
-//        }
-//
-//        case 'b': {
-//            string file = buffer_.previous_file();
-//            if(!buffer_.open(file))
-//                error_message_ = "Could not open " + file;
-//            buffer_.format_lines();
-//            buffer_.size_lines();
-//
-//            break;
-//        }
-//        case 'g': {
-//            cout << "link number: ";
-//            int anchor_num;
-//            cin >> anchor_num;
-//            string file_name = buffer_.linked_files (anchor_num-1);
-//            if (!buffer_.open(file_name))
-//                error_message_ = "Could not open " + file_name;
-//            buffer_.format_lines();
-//            buffer_.size_lines();
-//            anchor_num = 0;
-//
-//            break;
-//        }
-//    }
-//}
 
 void FileViewer::run()
 {
