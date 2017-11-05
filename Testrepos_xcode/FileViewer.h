@@ -16,9 +16,9 @@ private:
     void display();
     
     Buffer buffer;
-    int window_height;
-    int line_size;
-    std::string error_message;
+    int window_height_;
+    int line_size_;
+    std::string error_message_;
 };
 
 #endif
