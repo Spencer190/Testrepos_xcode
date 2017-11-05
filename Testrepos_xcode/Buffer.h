@@ -22,7 +22,7 @@ public:
     void set_line_size(int s) {line_size_=s;}
     void first_link ();
     void size_lines ();//DO WE NEED THIS?????????????
-    void format_lines ();
+    void format_lines ();//DO WE NEED THIS?????????????
     string previous_file ();
     string linked_files(const int & anchor_num);
     
