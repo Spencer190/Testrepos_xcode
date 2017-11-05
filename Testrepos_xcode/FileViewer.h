@@ -15,7 +15,7 @@ public:
 private:
     void display();
     
-    Buffer buffer;
+    Buffer buffer_;
     int window_height_;
     int line_size_;
     std::string error_message_;
