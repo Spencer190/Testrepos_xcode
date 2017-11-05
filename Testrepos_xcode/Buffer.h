@@ -12,7 +12,7 @@ using std::string;
 class Buffer
 {
 
-public:
+public:
     void display() const;
     const string & get_file_name() const {return file_name_;}
     void move_to_next_page();

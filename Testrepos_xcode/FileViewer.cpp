@@ -32,45 +32,57 @@ void FileViewer::display()
     cout << short_separator << endl;
 }
 
-void FileViewer::execute_command(char command, bool & done)
-{
-    switch (command) {
-        case 'n': {
-            buffer_.move_to_next_page();
-            break;
-        }
-
-        case 'o': {
-            cout << "file name: ";
-            string file_name;
-            getline(cin, file_name);
-            if (!buffer_.open(file_name))
-                error_message_ = "Could not open " + file_name;
-            break;
-        }
-
-        case 'p': {
-            buffer_.move_to_previous_page();
-            break;
-        }
-
-        case 'q': {
-            done = true;
-            break;
-        }
-            
-        case 'b': {
-            
-            
-            break;
-        }
-        case 'g': {
-        
-            
-            break;
-        }
-    }
-}
+//void FileViewer::execute_command(char command, bool & done)
+//{
+//    switch (command) {
+//        case 'n': {
+//            buffer_.move_to_next_page();
+//            break;
+//        }
+//
+//        case 'o': {
+//            cout << "file name: ";
+//            string file_name;
+//            getline(cin, file_name);
+//            if (!buffer_.open(file_name))
+//                error_message_ = "Could not open " + file_name;
+//            break;
+//        }
+//
+//        case 'p': {
+//            buffer_.move_to_previous_page();
+//            break;
+//        }
+//
+//        case 'q': {
+//            done = true;
+//            break;
+//        }
+//
+//        case 'b': {
+//            string file = buffer_.previous_file();
+//            if(!buffer_.open(file))
+//                error_message_ = "Could not open " + file;
+//            buffer_.format_lines();
+//            buffer_.size_lines();
+//
+//            break;
+//        }
+//        case 'g': {
+//            cout << "link number: ";
+//            int anchor_num;
+//            cin >> anchor_num;
+//            string file_name = buffer_.linked_files (anchor_num-1);
+//            if (!buffer_.open(file_name))
+//                error_message_ = "Could not open " + file_name;
+//            buffer_.format_lines();
+//            buffer_.size_lines();
+//            anchor_num = 0;
+//
+//            break;
+//        }
+//    }
+//}
 
 void FileViewer::run()
 {
@@ -79,9 +91,12 @@ void FileViewer::run()
     cin.get();  // '\n'
     cout << '\n';
     buffer_.set_window_height(window_height_);
-    //cout << "Line length? ";
-    //cin >> line_length_;
-    //buffer_.set_line_length(line_length_);
+    
+    cout << "Line size? ";
+    cin >> line_size_;
+    cin.get(); //'\n'
+    cout << '\n';
+    buffer_.set_line_size(line_size_);
     
     bool done = false;
     while (!done) {
@@ -92,10 +107,60 @@ void FileViewer::run()
         cin >> command;
         cin.get(); // '\n'
 
-        execute_command(command, done);
-
+        //execute_command(command, done);
+        switch (command) {
+            case 'n': {
+                buffer_.move_to_next_page();
+                break;
+            }
+                
+            case 'o': {
+                cout << "file name: ";
+                string file_name;
+                getline(cin, file_name);
+                if (!buffer_.open(file_name))
+                    error_message_ = "Could not open " + file_name;
+                buffer_.format_lines();
+                buffer_.size_lines();
+                buffer_.first_link();
+                break;
+            }
+                
+            case 'p': {
+                buffer_.move_to_previous_page();
+                break;
+            }
+                
+            case 'q': {
+                done = true;
+                break;
+            }
+                
+            case 'b': {
+                string file = buffer_.previous_file();
+                if(!buffer_.open(file))
+                    error_message_ = "Could not open " + file;
+                buffer_.format_lines();
+                buffer_.size_lines();
+                break;
+            }
+            case 'g': {
+                cout << "link number: ";
+                int anchor_num;
+                cin >> anchor_num;
+                string file_name = buffer_.linked_files (anchor_num-1);
+                if (!buffer_.open(file_name))
+                    error_message_ = "Could not open " + file_name;
+                buffer_.format_lines();
+                buffer_.size_lines();
+                anchor_num = 0;
+                
+                break;
+            }
+        }
         cout << endl;
-    }
+    }//while
+    return;
 }
 
 
