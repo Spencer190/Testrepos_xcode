@@ -1,7 +1,5 @@
 // Buffer.h
 
-
-//al;skdfjal;sdkjfal;sdf
 #include <vector>
 #include <string>
 
