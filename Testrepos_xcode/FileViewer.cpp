@@ -19,7 +19,7 @@ void FileViewer::display()
         error_message_.clear();
     }
 
-    string file_name = buffer_.file_name();
+    string file_name = buffer_.file_name_();
     if (file_name.empty())
         cout << "<no file opened>\n";
     else
