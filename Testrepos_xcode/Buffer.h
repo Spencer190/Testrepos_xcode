@@ -20,7 +20,7 @@ public:
     bool open(const string& file_name_);
     void set_window_height(int h) {window_height_ = h;}
     void set_line_size(int s) {line_size_=s;}
-    void first_link (); //DO WE NEED THIS????????????
+    void first_link (); //DO WE NEED THIS?????????????
     void size_lines ();
     void format_lines ();
     string previous_file ();
