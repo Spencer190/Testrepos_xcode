@@ -15,12 +15,12 @@ class Buffer
 public:
     void display() const;
     const string & get_file_name() const {return file_name_;}
-    void move_to_previous_page();
     void move_to_next_page();
+    void move_to_previous_page();
     bool open(const string& file_name_);
     void set_window_height(int h) {window_height_ = h;}
     void set_line_size(int s) {line_size_=s;}
-    void first_link ();
+    void first_link (); //DO WE NEED THIS????????????
     void size_lines ();
     void format_lines ();
     string previous_file ();
@@ -41,15 +41,15 @@ private:
     int num_of_linked_files_ = 0;
 };
 
-inline void Buffer::move_to_previous_page() {
-    if(ix_top_line_ > 0){
-        ix_top_line_ -= window_height_;
-    }
-}
-
 inline void Buffer::move_to_next_page() {
     if(ix_top_line_ + window_height_ < v_lines_.size()){
         ix_top_line_ += window_height_;
+    }
+}
+
+inline void Buffer::move_to_previous_page() {
+    if(ix_top_line_ > 0){
+        ix_top_line_ -= window_height_;
     }
 }
 
