@@ -8,9 +8,9 @@
 #include "Buffer.h"
 
 class FileViewer
-{
+{
 public:
-    void run();
+    void run();
     
 private:
     void display();

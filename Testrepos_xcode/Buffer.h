@@ -11,8 +11,7 @@ using std::string;
 
 class Buffer
 {
-
-public:
+public:
     void display() const;
     const string & get_file_name() const {return file_name_;}
     void move_to_next_page();
@@ -26,7 +25,7 @@ public:
     string previous_file ();
     string linked_files(const int & anchor_num);
     
-private:;
+private:
     vector<string> v_lines_;
     vector<string> formatted_lines_;
     vector<string> browser_files_;
