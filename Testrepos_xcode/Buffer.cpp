@@ -1,6 +1,7 @@
 // Buffer.cpp
 
 #include "Buffer.h"
+#include "FileViewer.h"
 
 #include <fstream>
 #include <iomanip>
@@ -8,6 +9,7 @@
 using std::cout;
 #include <string>
 using std::string;
+#include <sstream>
 using std::istringstream;//n
 
 void Buffer::display() const
@@ -78,7 +80,6 @@ void Buffer::size_lines()
     string chunk;
     string start_of_new_paragraph;
     for (int i= 0; i < v_lines_.size(); i++) {
-        int length_of_line = 0;
         if (v_lines_[i] == "\n") {
             istringstream iss(v_lines_[i]);
             iss >> start_of_new_paragraph;
