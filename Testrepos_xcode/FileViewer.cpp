@@ -14,22 +14,22 @@ void FileViewer::display()
 {
     const string long_separator(50, '-');
     const string short_separator(8, '-');
-
+    
     if (!error_message_.empty()) {
         cout << "ERROR: " + error_message_ << endl;
         error_message_.clear();
     }
-
+    
     string file_name = buffer_.get_file_name();
     if (file_name.empty())
         cout << "<no file opened>\n";
     else
         cout << file_name << endl;
-
+    
     cout << long_separator << endl;
     buffer_.display();
     cout << long_separator << endl;
-    cout << "  next  previous  open  quit\n";
+    cout << "  next  previous  open  quit  go  back\n";
     cout << short_separator << endl;
 }
 
@@ -38,7 +38,6 @@ void FileViewer::run()
     cout << "Window height? ";
     cin >> window_height_;
     cin.get();  // '\n'
-    cout << '\n';
     buffer_.set_window_height(window_height_);
     
     cout << "Line size? ";
@@ -50,13 +49,11 @@ void FileViewer::run()
     bool done = false;
     while (!done) {
         display();
-
+        
         cout << "choice: ";
         char command;
         cin >> command;
         cin.get(); // '\n'
-
-        //execute_command(command, done);
         switch (command) {
             case 'n': {
                 buffer_.move_to_next_page();
@@ -103,7 +100,6 @@ void FileViewer::run()
                 buffer_.format_lines();
                 buffer_.size_lines();
                 anchor_num = 0;
-                
                 break;
             }
         }

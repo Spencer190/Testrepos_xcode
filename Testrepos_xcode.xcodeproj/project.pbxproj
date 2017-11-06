@@ -25,6 +25,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0548E83D1FB000C5005ED461 /* courses.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = courses.txt; sourceTree = "<group>"; };
 		84893A571FA66CE300ECE85F /* Testrepos_xcode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Testrepos_xcode; sourceTree = BUILT_PRODUCTS_DIR; };
 		84893A611FA670A500ECE85F /* Buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Buffer.h; sourceTree = "<group>"; };
 		84893A621FA670A500ECE85F /* FileViewer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileViewer.cpp; sourceTree = "<group>"; };
@@ -67,15 +68,16 @@
 		84893A591FA66CE300ECE85F /* Testrepos_xcode */ = {
 			isa = PBXGroup;
 			children = (
+				84893A651FA670A600ECE85F /* test.cpp */,
 				84893A691FA670A600ECE85F /* Buffer.cpp */,
-				84893A611FA670A500ECE85F /* Buffer.h */,
-				84893A671FA670A600ECE85F /* design.txt */,
 				84893A621FA670A500ECE85F /* FileViewer.cpp */,
 				84893A661FA670A600ECE85F /* FileViewer.h */,
+				84893A611FA670A500ECE85F /* Buffer.h */,
+				84893A671FA670A600ECE85F /* design.txt */,
 				84893A681FA670A600ECE85F /* preface.txt */,
 				84893A631FA670A500ECE85F /* sample_interface.txt */,
 				84893A641FA670A600ECE85F /* specification.txt */,
-				84893A651FA670A600ECE85F /* test.cpp */,
+				0548E83D1FB000C5005ED461 /* courses.txt */,
 			);
 			path = Testrepos_xcode;
 			sourceTree = "<group>";

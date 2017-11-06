@@ -2,7 +2,6 @@
 
 #include "Buffer.h"
 #include "FileViewer.h"
-
 #include <fstream>
 #include <iomanip>
 #include <iostream>
@@ -21,13 +20,11 @@ void Buffer::display() const
         cout << '\n';
     }
 }
-
 bool Buffer::open(const string & new_file_name)
 {
     std::ifstream file(new_file_name);
     if (!file)
         return false;
-
     v_lines_.clear();
     // Note: the vector is cleared only after we know the file
     // opened successfully.
@@ -36,7 +33,7 @@ bool Buffer::open(const string & new_file_name)
     string line;
     while (getline(file, line))
         v_lines_.push_back(line);
-
+    
     file_name_ = new_file_name;
     ix_top_line_ = 0;
     return true;
@@ -70,7 +67,6 @@ void Buffer::format_lines()
             link_num_++;
         }
     }
-    
 }
 
 void Buffer::size_lines()
@@ -104,3 +100,4 @@ void Buffer::size_lines()
     }
     if(iss.eof()) formatted_lines_.push_back(line);
 }
+

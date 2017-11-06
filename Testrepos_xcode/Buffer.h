@@ -20,8 +20,8 @@ public:
     void set_window_height(int h) {window_height_ = h;}
     void set_line_size(int s) {line_size_=s;}
     void first_link ();
-    void size_lines ();//DO WE NEED THIS?????????????
-    void format_lines ();//DO WE NEED THIS?????????????
+    void size_lines ();
+    void format_lines ();
     string previous_file ();
     string linked_files(const int & anchor_num);
     
@@ -70,3 +70,4 @@ inline string Buffer::previous_file() {
 }
 
 #endif
+
